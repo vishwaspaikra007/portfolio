@@ -1,0 +1,45 @@
+.container {
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px -7px #5c1609, inset 0 0 12px -4px #481414;
+    border-radius: 20px;
+    height: fit-content;
+    padding-bottom: 60px;
+    max-height: calc(100vh - 80px);
+    margin: auto;
+}
+.container > h1 {
+    text-align: center;
+    width: 100%;
+    color: var(--h1-color);
+    margin-top: 20px;
+    font-size: 26px;
+}
+.container p {
+    font-size: 13px;
+}
+.container > div {
+    transform: scale(1.13);
+    margin-top: 20px;
+    width: 90%;
+}
+.container > div h1 {
+    font-size: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container > div p {
+    font-size: 12px;
+}
+.container > div > div > div {
+    padding: 10px;
+}
+@media screen and (max-width: 800px) {
+    .container {
+        width: 90vw;
+        margin: auto;
+    }
+}

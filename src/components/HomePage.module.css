@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.container h1 {
+    color: var(--h1-color);
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+    font-size: var(--h1-size);
+}

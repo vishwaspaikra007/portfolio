@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+:root {
+  --main-bg-color: #fc6341;
+  --h1-color: #fff55a;
+  --h1-size: 10vw;
+  --h2-size: 7vw;
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+body {
+    overflow-x: hidden;
+    background-color: var(--main-bg-color);
+    margin: 0;
+}
+.App > div {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+@media screen and (max-width: 1100px) {
+  .App > div {
+    
+  }
+}
+@media screen and (max-width: 800px) {
+  .App > div {
+    min-height: 0;
+    scroll-snap-align: none;
+    scroll-snap-stop: always;
+  }
+}

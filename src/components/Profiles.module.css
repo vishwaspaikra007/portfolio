@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+.container h1 {
+    text-align: center;
+    width: 100%;
+    color: var(--h1-color);
+    font-size: var(--h2-size);
+}
+.container .imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: min(850px, 100%);
+    margin: 20px;
+}
+.container .imgContainer a > div {
+    width: 200px;
+}
+@media screen and (max-width: 900px) {
+    .container .imgContainer a > div {
+        width: 120px;
+    }
+}
+.container img {
+    height: 100%;
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 16px -4px;
+    position: absolute;
+    top: 0;
+    object-fit: contain;
+}
