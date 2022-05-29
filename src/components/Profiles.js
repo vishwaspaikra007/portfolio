@@ -3,7 +3,7 @@ import styles from './Profiles.module.css'
 import MotionH1 from './MotionH1'
 import ImageBox from './ImageBox'
 
-const base = '/images/profiles/'
+const base = 'images/profiles/'
 const list = [
   ['leetcode.png', 'leetcode', 'https://leetcode.com/vishwaspaikra007/'],
   ['codechef.png', 'codechef', 'https://www.codechef.com/users/vishwas_paikra'],
