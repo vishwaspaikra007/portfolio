@@ -4,9 +4,9 @@ import React from 'react'
 import styles from './ImageBox.module.css'
 
 export default function ImageBox(props) {
-  const { imgURL: imgURL, type: type, name: name, delay: delay } = props
+  const { imgURL: imgURL, type: type, name: name, delay: delay, tooltip: tooltip } = props
   return (
-    <Card>
+    <Card style={{overflow: 'visible'}}>
       <CardActionArea>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -20,7 +20,7 @@ export default function ImageBox(props) {
           }}
           className={styles.container}
         >
-          <span className={styles.tooltip}>{name}</span>
+          {tooltip ? <span className={styles.tooltip}>{name}</span> : false}
           <img className={styles.img} src={imgURL} />
         </motion.div>
       </CardActionArea>

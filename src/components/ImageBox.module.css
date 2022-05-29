@@ -30,8 +30,10 @@
     opacity: 0;
     transition: 300ms;
     text-shadow: 0 0 2px black;
+    text-align: center;
 }
 .container:hover .tooltip {
     opacity: 1;
-    bottom: 40px;
+    bottom: 50%;
+    transform: translateY(50%);
 } 

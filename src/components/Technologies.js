@@ -6,31 +6,28 @@ import { InView, useInView } from 'react-intersection-observer'
 
 const base = 'images/'
 const listOfImages1 = [
-  ['c++.svg', 'c++'],
-  ['icons8-github.svg', 'github'],
   ['icons8-react.svg', 'react'],
+  ['icons8-nodejs.svg', 'nodejs'],
+  ['icons8-mongodb.svg', 'mongodb'],
   ['icons8-angularjs.svg', 'angularjs'],
-  ['icons8-git.svg', 'git'],
-  ['jimp.png', 'jimp'],
+  ['icons8-firebase.svg', 'firebase'],
+  ['icons8-docker.svg', 'docker'],
+  ['icons8-material-ui.svg', 'material-UI'],
+  ['framer.webp', 'framer'],
+  ['razorpay-glyph.svg', 'razorpay'],
+  ['icons8-paytm.svg', 'paytm'],
+  ['c++.svg', 'c++'],
+  ['icons8-javascript.svg', 'javascript'],
+  ['icons8-ethereum.svg', 'ethereum'],
+  ['metamask.svg', 'metamask'],
   ['icons8-css3.svg', 'css3'],
   ['icons8-html-5.svg', 'html3'],
-  ['metamask.svg', 'metamask'],
-  ['icons8-docker.svg', 'docker'],
-  ['icons8-javascript.svg', 'javascript'],
+  ['icons8-github.svg', 'github'],
+  ['icons8-git.svg', 'git'],
+  ['jimp.png', 'jimp'],
   ['passport.png', 'passport.js'],
-  ['icons8-ethereum.svg', 'ethereum'],
-  ['icons8-mongodb.svg', 'mongodb'],
-  ['razorpay-glyph.svg', 'razorpay'],
   ['icons8-ffmpeg.svg', 'ffmpeg'],
-  ['icons8-nodejs.svg', 'nodejs'],
-  ['icons8-firebase.svg', 'firebase'],
-  ['icons8-paytm.svg', 'paytm'],
-  ['icons8-material-ui.svg', 'material-UI'],
 ]
-const listOfImages2 = listOfImages1,
-listOfImages3 = listOfImages1
-listOfImages2.sort()
-listOfImages3.reverse()
 
 export default function Technologies() {
   const { ref, inView } = useInView({
@@ -65,6 +62,7 @@ export default function Technologies() {
       <div className={styles.imgContainer}>
         {listOfImages1.map((fileName, idx) => (
           <ImageBox
+            tooltip={true}
             key={idx}
             imgURL={base + fileName[0]}
             name={fileName[1]}
