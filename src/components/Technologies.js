@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import ImageBox from './ImageBox'
 import styles from './Technologies.module.css'
 import { motion, useAnimation } from 'framer-motion/dist/framer-motion'
@@ -11,6 +11,7 @@ const listOfImages1 = [
   ['icons8-mongodb.svg', 'mongodb'],
   ['icons8-angularjs.svg', 'angularjs'],
   ['icons8-firebase.svg', 'firebase'],
+  ['heroku.png', 'heroku'],
   ['icons8-docker.svg', 'docker'],
   ['icons8-material-ui.svg', 'material-UI'],
   ['framer.webp', 'framer'],
@@ -30,6 +31,8 @@ const listOfImages1 = [
 ]
 
 export default function Technologies() {
+
+  const delayUnit = window.innerWidth > 800 ? 0.1 : 0
   const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.2,
@@ -67,7 +70,7 @@ export default function Technologies() {
             imgURL={base + fileName[0]}
             name={fileName[1]}
             type={idx % 4}
-            delay={0.1*idx}
+            delay={delayUnit*idx}
           />
         ))}
       </div>

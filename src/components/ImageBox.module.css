@@ -17,7 +17,7 @@
     object-fit: contain;
 }
 .tooltip {
-    color: #fc6341;
+    color: white;
     backdrop-filter: blur(6px);
     position: absolute;
     bottom: 0px;

@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Profiles from './components/Profiles'
 import Details from './components/Details'
 import NavigationMobile from './components/NavigationMobile'
+import BlockchainVideo from './components/BlockchainVideo'
 
 function App() {
   const [isMobile , setIsMobile] = useState(window.innerHeight/window.innerWidth > 0.5 ? true : false)
@@ -29,6 +30,7 @@ function App() {
       <HomePage />
       <Technologies />
       <Projects />
+      <BlockchainVideo />
       <Details />
     </div>
   )
