@@ -12,8 +12,8 @@ const useStyles = makeStyles({
         flexDirection: "column",
     },
     videoContainer: {
-        maxWidth: "850px",
-        width: "90vw",
+        // maxWidth: "850px",
+        width: "fit-content",
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",

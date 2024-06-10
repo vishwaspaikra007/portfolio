@@ -7,7 +7,7 @@ export default function Details() {
   return (
     <div className={styles.container}>
         <Profiles />
-        <Experience />
+        {/* <Experience /> */}
     </div>
   )
 }

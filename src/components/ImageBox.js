@@ -1,12 +1,27 @@
-import { Card, CardActionArea } from '@material-ui/core'
+import { Card, CardActionArea, makeStyles } from '@material-ui/core'
 import { motion } from 'framer-motion/dist/framer-motion'
 import React from 'react'
 import styles from './ImageBox.module.css'
 
+const useStyles = makeStyles({
+  root: {
+    overflow: 'visible',
+    transition: '200ms',
+    "&:hover": {
+      transform: `translate(0, -10px)`
+    }
+  }
+})
+
+
 export default function ImageBox(props) {
   const { imgURL: imgURL, type: type, name: name, delay: delay, tooltip: tooltip } = props
+
+  
+  const classes = useStyles()
+
   return (
-    <Card style={{overflow: 'visible'}}>
+    <Card className={classes.root}>
       <CardActionArea>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

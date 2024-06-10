@@ -4,7 +4,8 @@ import { motion, useAnimation } from 'framer-motion/dist/framer-motion'
 import { InView, useInView } from 'react-intersection-observer'
 
 const list = [
-  'intro', 'technologies', 'projects', 'profiles', 'experience'
+  'intro', 'technologies', 'projects', 'profiles', 
+  // 'experience'
 ]
 export default function Heading() {
   const animation = useAnimation()

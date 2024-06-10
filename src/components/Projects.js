@@ -16,6 +16,10 @@ const useStyles = makeStyles({
   root: {
     // padding: 10,
     // margin: 'auto',
+    "&:hover": {
+      transform: `translate(0, -10px)`
+    },
+    transition: '200ms'
   },
   grid: {
     display: 'grid',
